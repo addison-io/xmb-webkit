@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}{{title}}{% endblock %}
+{% block description %}{{description}}{% endblock %}
+{% block author %}{{author}}{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="text-center">{{title}}</h1>
+    </div>
+    <div class="col-md-12">
+      <p>{{description}}</p>
+    </div>
+  </div>
+  <div class="game-bar">
+    <div class="row">
+      {% for game in games %}
+        <div class="col-md-2">
+          <img class="img-fluid" src="{% static '' %}media/{{ game.image }}" data-rom="{{ rom }}" data-iso="{{ game.rom.name }}" />
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

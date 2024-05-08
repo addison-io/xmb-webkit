@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}XMB{% endblock %}
+
+{% block content %}
+  <video class="background-video" src="{% static 'video/main.mp4' %}" autoplay loop playsinline muted></video>
+
+  <div class="display-bar">
+    <div class="rom-bar">
+      {% for rom in roms %}
+        <div class="rom-item" data-rom="{{ rom.name }}">
+          <img class="rom-item-img" src="{% static '' %}{{ rom.image }}" />
+          <div class="rom-item-name">{{ rom.name }}</div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="game-bar">
+      {% for rom in roms %}
+        <div class="game-list" data-rom="{{ rom.name }}">
+          {% for game in rom.games %}
+            <div class="game-item" data-rom="{{ rom.name }}" data-image="{% static '' %}{{ game.image_3d }}" data-iso="{{ game.rom.name }}" data-name="{{ game.name }}" data-year="{{ game.year }}" data-description="{{ game.description }}">
+              <div class="game-item-img-wrapper">
+                <img class="game-item-img" src="{% static '' %}{{ game.image }}" />
+                <video class="game-item-video">
+                  {% if game.video %}
+                    <source src="{% static '' %}{{ game.video }}" />
+                  {% endif %}
+                </video>
+              </div>
+              <div class="game-item-name">{{ game.name }}</div>
+            </div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="side-bar">
+    <div class="side-bar-top">
+      <div class="item-img-wrapper">
+        <img class="item-img" src="" />
+      </div>
+      <div class="item-name"></div>
+      <div class="item-year"></div>
+    </div>
+    <div class="side-bar-bottom">
+      <div class="item-description"></div>      
+    </div>
+  </div>
+{% endblock %}
