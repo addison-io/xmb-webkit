@@ -5,7 +5,6 @@
 ############################################################################################
 
 !define APP_NAME "XMB"
-!define WEB_SITE "http://addison-io.github.io/xmb-webkit/"
 !define VERSION "00.01.00.00"
 !define DESCRIPTION "XMB Game Launcher"
 !define LICENSE_TXT ".\gplv3.txt"
