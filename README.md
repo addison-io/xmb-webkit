@@ -13,6 +13,9 @@ Video:
 
 Download [XMB_Setup.exe](https://github.com/addison-io/xmb-webkit/releases/download/Release-0.01/XMB_Setup.exe) and run the installer.
 
+# Controls
+Arrow keys to navigate, Enter to select item, ESC key to exit.
+
 # ROMs Directory
 Your ROMs directory needs to have its layout in the following way for XMB to work correctly. 
 ```
