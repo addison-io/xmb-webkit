@@ -251,6 +251,6 @@ def exit(request):
 
         os.system('taskkill /pid ' + str(os.getpid()) + ' /F')
     else:
-        os.system('lsof -t -i tcp:8192 | xargs kill -9')
+        os.system('lsof -t -i tcp:8000 | xargs kill -9')
     
     return HttpResponse('Exit')
