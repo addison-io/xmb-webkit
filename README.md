@@ -11,7 +11,7 @@ Video:
 
 # How to Install
 
-Download [XMB_Setup.exe](https://github.com/addison-io/xmb-webkit/releases/download/Release-0.01/XMB_Setup.exe) and run the installer.
+Download [XMB_Setup.exe](https://github.com/addison-io/xmb-webkit/releases/) and run the installer.
 
 # Controls
 Arrow keys to navigate, Enter to select item, ESC key to exit.
